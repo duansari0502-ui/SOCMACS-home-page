@@ -109,15 +109,72 @@
         font-size: 30px;
       }
     }
+button {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff7a18, #ffcc00);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
+/* Hover Effect */
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Click Effect */
+button:active {
+  transform: scale(0.95);
+}
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #002147;
+  padding: 10px 30px;
+  color: white;
+}
+
+/* Left side (logo + name) */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image */
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Nav links */
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
   </style>
 </head>
 
 <body>
 
   <!-- HEADER -->
-  <header>
-    <h2>SOCMACSe</h2>
+  <header class="navbar">
+
+  <div class="nav-left">
+    <img src="https://socmacs.edu.in/assist/logo/logo1.png" alt="Logo">
+    <h2>SOCMACS</h2>
+  </div>
     <nav>
       <a href="#">Home</a>
       <a href="#">Courses</a>
