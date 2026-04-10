@@ -2,78 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>College Name</title>
+  <title>College Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.6;
     }
 
+    /* HEADER */
     header {
-      background: #003366;
+      background: #002147;
       color: white;
-      padding: 15px;
       display: flex;
       justify-content: space-between;
+      padding: 15px 30px;
       align-items: center;
-    }
-
-    header h1 {
-      margin: 0;
     }
 
     nav a {
       color: white;
-      margin: 0 10px;
+      margin-left: 20px;
       text-decoration: none;
     }
 
+    /* HERO */
     .hero {
-      background: url('campus.jpg') no-repeat center/cover;
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
+      background-size: cover;
+      background-position: center;
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 100px 20px;
     }
 
-    .hero h2 {
-      font-size: 40px;
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
     }
 
+    .hero button {
+      padding: 12px 25px;
+      background: #ffcc00;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* SECTION */
     .section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
 
-    .cards {
+    /* COURSES */
+    .courses {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
 
-    .card {
-      border: 1px solid #ddd;
-      padding: 20px;
-      width: 250px;
+    .course-card {
+      width: 280px;
       border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background: white;
+      transition: transform 0.3s;
     }
 
+    .course-card:hover {
+      transform: scale(1.05);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-card h3 {
+      margin: 15px 0 5px;
+    }
+
+    .course-card p {
+      padding: 0 15px 15px;
+    }
+
+    /* FOOTER */
     footer {
-      background: #003366;
+      background: #002147;
       color: white;
       text-align: center;
       padding: 20px;
     }
 
-    @media (max-width: 768px) {
-      .cards {
-        flex-direction: column;
-        align-items: center;
+    /* RESPONSIVE */
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 30px;
       }
     }
+
   </style>
 </head>
 
@@ -81,7 +117,7 @@
 
   <!-- HEADER -->
   <header>
-    <h1>College Name</h1>
+    <h2>My College</h2>
     <nav>
       <a href="#">Home</a>
       <a href="#">Courses</a>
@@ -90,41 +126,58 @@
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero">
-    <h2>Welcome to Our College</h2>
-    <p>Empowering Students for the Future</p>
+    <div>
+      <h1>Welcome to Our College</h1>
+      <p>Shaping Your Future Starts Here</p>
+      <button>Apply Now</button>
+    </div>
   </section>
 
   <!-- ABOUT -->
   <section class="section">
     <h2>About Us</h2>
-    <p>Our college is dedicated to providing quality education and developing future leaders.</p>
+    <p>We provide quality education with modern facilities and experienced faculty.</p>
   </section>
 
   <!-- COURSES -->
   <section class="section">
-    <h2>Our Programs</h2>
-    <div class="cards">
-      <div class="card">
+    <h2>Our Courses</h2>
+
+    <div class="courses">
+
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
         <h3>Engineering</h3>
-        <p>Innovative technical education.</p>
+        <p>Learn cutting-edge technology and innovation.</p>
       </div>
-      <div class="card">
+
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
         <h3>Business</h3>
-        <p>Learn management & entrepreneurship.</p>
+        <p>Develop leadership and management skills.</p>
       </div>
-      <div class="card">
+
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
         <h3>Arts</h3>
-        <p>Explore creativity and culture.</p>
+        <p>Explore creativity, culture, and design.</p>
       </div>
+
+      <div class="course-card">
+        <img src="https://images.unsplash.com/photo-1581093588401-22f0c8e4f1f0">
+        <h3>Science</h3>
+        <p>Discover the world through research and experiments.</p>
+      </div>
+
     </div>
   </section>
 
   <!-- ADMISSIONS -->
   <section class="section">
-    <h2>Admissions</h2>
-    <p>Apply now to start your journey with us.</p>
+    <h2>Admissions Open</h2>
+    <p>Join us and build a successful career.</p>
     <button>Apply Now</button>
   </section>
 
@@ -132,12 +185,12 @@
   <section class="section">
     <h2>Contact Us</h2>
     <p>Email: info@college.com</p>
-    <p>Phone: +91 12345 67890</p>
+    <p>Phone: +91 9876543210</p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 College Name | All Rights Reserved</p>
+    <p>© 2026 My College | All Rights Reserved</p>
   </footer>
 
 </body>
